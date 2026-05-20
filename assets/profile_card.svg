@@ -6,7 +6,7 @@
   <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
    <cc:Work>
     <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
-    <dc:date>2026-05-19T17:32:50.557354</dc:date>
+    <dc:date>2026-05-20T17:48:45.591460</dc:date>
     <dc:format>image/svg+xml</dc:format>
     <dc:creator>
      <cc:Agent>
@@ -101,17 +101,17 @@ Q 358.207488 197.31456 358.207488 200.01024
 L 358.207488 211.20768 
 Q 358.207488 213.90336 362.520576 213.90336 
 z
-" clip-path="url(#p197d462621)" style="fill: #d8c8ef; opacity: 0.4"/>
+" clip-path="url(#p8563a8c230)" style="fill: #d8c8ef; opacity: 0.4"/>
    </g>
    <g id="line2d_1">
     <path d="M 358.87104 114.1632 
 L 664.10496 114.1632 
-" clip-path="url(#p197d462621)" style="fill: none; stroke: #d8c8ef; stroke-width: 0.8; stroke-linecap: square"/>
+" clip-path="url(#p8563a8c230)" style="fill: none; stroke: #d8c8ef; stroke-width: 0.8; stroke-linecap: square"/>
    </g>
    <g id="line2d_2">
     <path d="M 358.87104 146.304 
 L 664.10496 146.304 
-" clip-path="url(#p197d462621)" style="fill: none; stroke: #d8c8ef; stroke-width: 0.8; stroke-linecap: square"/>
+" clip-path="url(#p8563a8c230)" style="fill: none; stroke: #d8c8ef; stroke-width: 0.8; stroke-linecap: square"/>
    </g>
    <g id="patch_6">
     <path d="M 362.454221 212.45184 
@@ -124,7 +124,7 @@ Q 359.468237 198.76608 359.468237 200.63232
 L 359.468237 210.5856 
 Q 359.468237 212.45184 362.454221 212.45184 
 z
-" clip-path="url(#p197d462621)" style="fill: #ad5600"/>
+" clip-path="url(#p8563a8c230)" style="fill: #ad5600"/>
    </g>
    <g id="patch_7">
     <path d="M 660.506166 212.45184 
@@ -137,7 +137,7 @@ Q 657.520182 198.76608 657.520182 200.63232
 L 657.520182 210.5856 
 Q 657.520182 212.45184 660.506166 212.45184 
 z
-" clip-path="url(#p197d462621)" style="fill: #435f7a"/>
+" clip-path="url(#p8563a8c230)" style="fill: #435f7a"/>
    </g>
    <g id="text_1">
     <!-- sernn -->
@@ -1134,7 +1134,7 @@ z
   </g>
  </g>
  <defs>
-  <clipPath id="p197d462621">
+  <clipPath id="p8563a8c230">
    <rect x="345.6" y="11.52" width="331.776" height="207.36"/>
   </clipPath>
  </defs>
