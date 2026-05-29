@@ -155,9 +155,12 @@ def generate_profile_card(stats: dict):
         ax.set_facecolor("none")
         ax.axis("off")
 
-    platforms = [(name, count) for name, count in stats["platforms"].items() if count > 0]
-    sizes = [count for _, count in platforms] or [1]
-    colors = [PLATFORM_COLOR.get(name, C_LIGHT) for name, _ in platforms] or [C_LIGHT]
+    languages = sorted(
+        ((name, count) for name, count in stats["languages"].items() if count > 0),
+        key=lambda item: -item[1],
+    )
+    sizes = [count for _, count in languages] or [1]
+    colors = [LANG_COLOR.get(name, LANG_COLOR["Other"]) for name, _ in languages] or [C_LIGHT]
 
     ax_d.pie(
         sizes,
@@ -189,28 +192,29 @@ def generate_profile_card(stats: dict):
     ]
     for i, (label, value) in enumerate(rows):
         y = 0.58 - i * 0.125
+        value_color = LANG_COLOR.get(value, C_TEXT) if label == "Main Lang" else C_TEXT
         ax_i.text(0.04, y, label, fontsize=9.4, color=C_MUTED, va="center")
         ax_i.text(0.96, y, value, fontsize=11.8, fontweight="bold",
-                  color=C_TEXT, va="center", ha="right")
+                  color=value_color, va="center", ha="right")
         if i < len(rows) - 1:
             ax_i.plot([0.04, 0.96], [y - 0.062, y - 0.062],
                       color=C_LIGHT, linewidth=0.8)
 
-    if platforms:
-        total = sum(count for _, count in platforms)
-        ax_i.text(0.04, 0.120, "Platforms", fontsize=8.4, color=C_MUTED, va="center")
+    if languages:
+        total = sum(count for _, count in languages)
+        ax_i.text(0.04, 0.120, "Languages", fontsize=8.4, color=C_MUTED, va="center")
         bx, by, bh = 0.04, 0.028, 0.072
         ax_i.add_patch(FancyBboxPatch(
             (bx - 0.002, by - 0.004), 0.926, bh + 0.008,
             boxstyle="round,pad=0,rounding_size=0.013",
             facecolor=C_LIGHT, edgecolor="none", alpha=0.40, zorder=1,
         ))
-        for platform, count in platforms:
+        for language, count in languages:
             bw = (count / total) * 0.92
             ax_i.add_patch(FancyBboxPatch(
                 (bx + 0.0018, by + 0.003), max(bw - 0.0036, 0.005), bh - 0.006,
                 boxstyle="round,pad=0,rounding_size=0.009",
-                facecolor=PLATFORM_COLOR.get(platform, C_LIGHT),
+                facecolor=LANG_COLOR.get(language, LANG_COLOR["Other"]),
                 edgecolor="none", zorder=2,
             ))
             bx += bw
