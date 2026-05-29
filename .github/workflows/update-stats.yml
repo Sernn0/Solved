@@ -1,4 +1,4 @@
-name: Update Programmers Stats
+name: Update Problem Stats
 
 on:
   workflow_dispatch:

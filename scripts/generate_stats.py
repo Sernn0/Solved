@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Generate Programmers stats SVGs for README from local solutions."""
+"""Generate overall problem-solving stats SVGs for README from local solutions."""
 
 import json
 import os
@@ -8,8 +8,8 @@ from datetime import datetime, timedelta
 from pathlib import Path
 from zoneinfo import ZoneInfo
 
-os.environ.setdefault("MPLCONFIGDIR", str(Path(tempfile.gettempdir()) / "programmers-stats-matplotlib"))
-os.environ.setdefault("XDG_CACHE_HOME", str(Path(tempfile.gettempdir()) / "programmers-stats-cache"))
+os.environ.setdefault("MPLCONFIGDIR", str(Path(tempfile.gettempdir()) / "problem-stats-matplotlib"))
+os.environ.setdefault("XDG_CACHE_HOME", str(Path(tempfile.gettempdir()) / "problem-stats-cache"))
 
 import matplotlib
 
@@ -25,11 +25,13 @@ plt.rcParams.update({
 })
 
 HANDLE = "sernn"
-PLATFORM = "Programmers"
 REPO_ROOT = Path(__file__).parent.parent
-DATA_FILE = REPO_ROOT / "data" / "programmers_history.json"
+DATA_FILE = REPO_ROOT / "data" / "problem_history.json"
 ASSETS_DIR = REPO_ROOT / "assets"
-PROGRAMMERS_DIR = REPO_ROOT / "프로그래머스"
+SOLUTION_ROOTS = {
+    "Baekjoon": REPO_ROOT / "백준",
+    "Programmers": REPO_ROOT / "프로그래머스",
+}
 
 ASSETS_DIR.mkdir(exist_ok=True)
 
@@ -82,19 +84,14 @@ LANG_COLOR = {
     "Other": "#8A8A8A",
 }
 
-LEVEL_COLOR = {
-    "Lv. 0": "#65A30D",
-    "Lv. 1": "#0891B2",
-    "Lv. 2": "#2563EB",
-    "Lv. 3": "#7C3AED",
-    "Lv. 4": "#DB2777",
-    "Lv. 5": "#EA580C",
-    "Unknown": "#8A8A8A",
+PLATFORM_COLOR = {
+    "Baekjoon": "#0076C0",
+    "Programmers": "#00A98F",
 }
 
 C_TEXT = "#344054"
 C_MUTED = "#667085"
-C_ACCENT = "#00A98F"
+C_ACCENT = "#4F46E5"
 C_LIGHT = "#D0D5DD"
 C_GRID = "#EAECF0"
 
@@ -109,32 +106,26 @@ def solution_files(root: Path) -> list[Path]:
     )
 
 
-def collect_programmers_stats() -> dict:
-    files = solution_files(PROGRAMMERS_DIR)
-    problem_dirs = sorted({path.parent for path in files})
-
+def collect_stats() -> dict:
+    platforms: dict[str, int] = {}
     lang_counts: dict[str, int] = {}
-    level_counts: dict[str, int] = {}
+    solution_file_count = 0
 
-    for path in files:
-        lang = EXT_TO_LANG.get(path.suffix.lstrip(".").lower(), "Other")
-        lang_counts[lang] = lang_counts.get(lang, 0) + 1
+    for platform, root in SOLUTION_ROOTS.items():
+        files = solution_files(root)
+        problem_dirs = {path.parent for path in files}
+        platforms[platform] = len(problem_dirs)
+        solution_file_count += len(files)
 
-    for problem_dir in problem_dirs:
-        try:
-            level_raw = problem_dir.relative_to(PROGRAMMERS_DIR).parts[0]
-        except (ValueError, IndexError):
-            level_raw = "Unknown"
-
-        level = f"Lv. {level_raw}" if level_raw.isdigit() else "Unknown"
-        level_counts[level] = level_counts.get(level, 0) + 1
+        for path in files:
+            lang = EXT_TO_LANG.get(path.suffix.lstrip(".").lower(), "Other")
+            lang_counts[lang] = lang_counts.get(lang, 0) + 1
 
     return {
         "handle": HANDLE,
-        "platform": PLATFORM,
-        "solved": len(problem_dirs),
-        "solution_files": len(files),
-        "levels": level_counts,
+        "solved": sum(platforms.values()),
+        "solution_files": solution_file_count,
+        "platforms": platforms,
         "languages": lang_counts,
     }
 
@@ -148,19 +139,11 @@ def update_history(stats: dict) -> list:
         "date": today,
         "solved": stats["solved"],
         "solution_files": stats["solution_files"],
-        "levels": stats["levels"],
+        "platforms": stats["platforms"],
     })
     history.sort(key=lambda item: item["date"])
     DATA_FILE.write_text(json.dumps(history, indent=2, ensure_ascii=False) + "\n")
     return history
-
-
-def sorted_levels(level_counts: dict) -> list[tuple[str, int]]:
-    def level_key(item: tuple[str, int]) -> int:
-        label, _ = item
-        return int(label.split(". ")[1]) if label.startswith("Lv. ") else 99
-
-    return sorted(level_counts.items(), key=level_key)
 
 
 def generate_profile_card(stats: dict):
@@ -172,9 +155,9 @@ def generate_profile_card(stats: dict):
         ax.set_facecolor("none")
         ax.axis("off")
 
-    levels = sorted_levels(stats["levels"])
-    sizes = [count for _, count in levels] or [1]
-    colors = [LEVEL_COLOR.get(level, LEVEL_COLOR["Unknown"]) for level, _ in levels] or [C_LIGHT]
+    platforms = [(name, count) for name, count in stats["platforms"].items() if count > 0]
+    sizes = [count for _, count in platforms] or [1]
+    colors = [PLATFORM_COLOR.get(name, C_LIGHT) for name, _ in platforms] or [C_LIGHT]
 
     ax_d.pie(
         sizes,
@@ -194,16 +177,15 @@ def generate_profile_card(stats: dict):
     ax_i.set_ylim(0, 1)
     ax_i.text(0.04, 0.90, HANDLE, fontsize=25, fontweight="bold",
               color=C_TEXT, va="center")
-    ax_i.text(0.96, 0.76, PLATFORM, fontsize=13, fontweight="bold",
+    ax_i.text(0.96, 0.76, "Problem Solved", fontsize=13, fontweight="bold",
               color=C_ACCENT, va="center", ha="right")
 
     top_lang = max(stats["languages"].items(), key=lambda item: item[1])[0] if stats["languages"] else "None"
-    top_level = sorted_levels(stats["levels"])[-1][0] if stats["levels"] else "None"
     rows = [
-        ("Programmers", f"{stats['solved']} solved"),
-        ("Solutions", f"{stats['solution_files']} files"),
+        ("Total", f"{stats['solved']} solved"),
+        ("Baekjoon", f"{stats['platforms'].get('Baekjoon', 0)} solved"),
+        ("Programmers", f"{stats['platforms'].get('Programmers', 0)} solved"),
         ("Main Lang", top_lang),
-        ("Top Level", top_level),
     ]
     for i, (label, value) in enumerate(rows):
         y = 0.58 - i * 0.125
@@ -214,22 +196,21 @@ def generate_profile_card(stats: dict):
             ax_i.plot([0.04, 0.96], [y - 0.062, y - 0.062],
                       color=C_LIGHT, linewidth=0.8)
 
-    if levels:
-        total = sum(count for _, count in levels)
-        ax_i.text(0.04, 0.120, "Programmers Levels",
-                  fontsize=8.4, color=C_MUTED, va="center")
+    if platforms:
+        total = sum(count for _, count in platforms)
+        ax_i.text(0.04, 0.120, "Platforms", fontsize=8.4, color=C_MUTED, va="center")
         bx, by, bh = 0.04, 0.028, 0.072
         ax_i.add_patch(FancyBboxPatch(
             (bx - 0.002, by - 0.004), 0.926, bh + 0.008,
             boxstyle="round,pad=0,rounding_size=0.013",
             facecolor=C_LIGHT, edgecolor="none", alpha=0.40, zorder=1,
         ))
-        for level, count in levels:
+        for platform, count in platforms:
             bw = (count / total) * 0.92
             ax_i.add_patch(FancyBboxPatch(
                 (bx + 0.0018, by + 0.003), max(bw - 0.0036, 0.005), bh - 0.006,
                 boxstyle="round,pad=0,rounding_size=0.009",
-                facecolor=LEVEL_COLOR.get(level, LEVEL_COLOR["Unknown"]),
+                facecolor=PLATFORM_COLOR.get(platform, C_LIGHT),
                 edgecolor="none", zorder=2,
             ))
             bx += bw
@@ -277,8 +258,8 @@ def generate_lang_list(lang_counts: dict):
         tx = bx + bar_w + 0.010
         ax.text(tx, cy + bar_h * 0.28, lang, ha="left", va="center",
                 fontsize=11, fontweight="bold", color=C_TEXT, zorder=5)
-        ax.text(tx, cy - bar_h * 0.28, f"{pct:.1f}%", ha="left", va="center",
-                fontsize=9, color=C_MUTED, zorder=5)
+        ax.text(tx, cy - bar_h * 0.28, f"{pct:.1f}%",
+                ha="left", va="center", fontsize=9, color=C_MUTED, zorder=5)
 
     plt.savefig(ASSETS_DIR / "lang_list.svg",
                 format="svg", bbox_inches=None, pad_inches=0, transparent=True)
@@ -286,52 +267,26 @@ def generate_lang_list(lang_counts: dict):
     print("  - lang_list.svg")
 
 
-def generate_progress_graph(history: list, stats: dict):
-    fig = plt.figure(figsize=(CANVAS_W, 5.5), facecolor="none")
-    ax = fig.add_axes([0.08, 0.18, 0.71, 0.68])
-    ax_r = fig.add_axes([0.81, 0.05, 0.17, 0.90])
+def draw_progress_axes(ax, history: list):
+    graph_days = 30
+    latest_dt = datetime.strptime(history[-1]["date"], "%Y-%m-%d")
+    first_dt = datetime.strptime(history[0]["date"], "%Y-%m-%d")
+    window_start = max(first_dt, latest_dt - timedelta(days=graph_days - 1))
+    window_days = (latest_dt - window_start).days + 1
 
-    for axis in (ax, ax_r):
-        axis.set_facecolor("none")
+    hist_dict = {item["date"]: item["solved"] for item in history}
+    disp_dates = []
+    disp_solved = []
+    last_known = history[0]["solved"]
+    for i in range(window_days):
+        day = window_start + timedelta(days=i)
+        key = day.strftime("%Y-%m-%d")
+        if key in hist_dict:
+            last_known = hist_dict[key]
+        disp_dates.append(day)
+        disp_solved.append(last_known)
 
-    ax_r.axis("off")
-    ax_r.set_xlim(0, 1)
-    ax_r.set_ylim(0, 1)
-
-    latest = history[-1] if history else {"solved": stats["solved"], "solution_files": stats["solution_files"]}
-    ax_r.text(0.05, 0.92, "Solved", fontsize=11, color=C_MUTED)
-    ax_r.text(0.05, 0.88, str(latest["solved"]),
-              fontsize=26, fontweight="bold", color=C_ACCENT, va="top")
-    ax_r.text(0.05, 0.72, "Files", fontsize=11, color=C_MUTED)
-    ax_r.text(0.05, 0.64, str(latest.get("solution_files", stats["solution_files"])),
-              fontsize=14, fontweight="bold", color=C_ACCENT)
-
-    if len(history) >= 2:
-        prev = history[-2]
-        delta = latest["solved"] - prev["solved"]
-        dc = "#16A34A" if delta > 0 else "#EF4444" if delta < 0 else C_MUTED
-        ds = f"+{delta} solved" if delta > 0 else f"{delta} solved" if delta < 0 else "0 solved"
-        ax_r.text(0.05, 0.58, ds, fontsize=11, color=dc, fontweight="bold")
-
-    if len(history) >= 2:
-        graph_days = 30
-        latest_dt = datetime.strptime(history[-1]["date"], "%Y-%m-%d")
-        first_dt = datetime.strptime(history[0]["date"], "%Y-%m-%d")
-        window_start = max(first_dt, latest_dt - timedelta(days=graph_days - 1))
-        window_days = (latest_dt - window_start).days + 1
-
-        hist_dict = {item["date"]: item["solved"] for item in history}
-        disp_dates = []
-        disp_solved = []
-        last_known = history[0]["solved"]
-        for i in range(window_days):
-            day = window_start + timedelta(days=i)
-            key = day.strftime("%Y-%m-%d")
-            if key in hist_dict:
-                last_known = hist_dict[key]
-            disp_dates.append(day)
-            disp_solved.append(last_known)
-
+    if len(disp_dates) >= 2:
         date_nums = mdates.date2num(disp_dates)
         if len(disp_dates) >= 4:
             x_smooth = np.linspace(date_nums[0], date_nums[-1], 300)
@@ -347,47 +302,95 @@ def generate_progress_graph(history: list, stats: dict):
         y_floor = max(0, min(disp_solved) - 1)
         ax.fill_between(x_plot, y_plot, y_floor, alpha=0.12,
                         color=C_ACCENT, zorder=3)
-        ax.scatter([disp_dates[-1]], [disp_solved[-1]], color=C_ACCENT, s=22,
-                   zorder=6, edgecolors="white", linewidths=0.8)
-
         ax.set_xlim(window_start - timedelta(hours=12), latest_dt + timedelta(hours=12))
-        ax.set_ylim(bottom=y_floor)
-        tick_interval = max(1, window_days // 7)
-        ax.xaxis.set_major_locator(mdates.DayLocator(interval=tick_interval))
-        ax.xaxis.set_major_formatter(mdates.DateFormatter("%m/%d"))
-        ax.tick_params(axis="x", colors=C_MUTED, labelsize=10, rotation=30)
-        ax.tick_params(axis="y", colors=C_MUTED, labelsize=10)
-        ax.set_ylabel("Solved Problems", fontsize=10, color=C_MUTED, labelpad=4)
-        ax.grid(True, color=C_GRID, linewidth=0.6, linestyle="--", alpha=0.7)
+    else:
+        y_floor = max(0, disp_solved[-1] - 1)
+        ax.scatter([disp_dates[-1]], [disp_solved[-1]], color=C_ACCENT, s=38,
+                   zorder=6, edgecolors="white", linewidths=0.8)
+        ax.set_xlim(disp_dates[-1] - timedelta(days=1), disp_dates[-1] + timedelta(days=1))
 
-        for spine in ("top", "right"):
-            ax.spines[spine].set_visible(False)
-        for spine in ("bottom", "left"):
-            ax.spines[spine].set_color(C_LIGHT)
+    ax.scatter([disp_dates[-1]], [disp_solved[-1]], color=C_ACCENT, s=24,
+               zorder=7, edgecolors="white", linewidths=0.8)
+    ax.set_ylim(bottom=y_floor)
+    tick_interval = max(1, window_days // 7)
+    ax.xaxis.set_major_locator(mdates.DayLocator(interval=tick_interval))
+    ax.xaxis.set_major_formatter(mdates.DateFormatter("%m/%d"))
+    ax.tick_params(axis="x", colors=C_MUTED, labelsize=10, rotation=30)
+    ax.tick_params(axis="y", colors=C_MUTED, labelsize=10)
+    ax.set_ylabel("Solved Problems", fontsize=10, color=C_MUTED, labelpad=4)
+    ax.grid(True, color=C_GRID, linewidth=0.6, linestyle="--", alpha=0.7)
 
-        ax.annotate(str(disp_solved[-1]), xy=(disp_dates[-1], disp_solved[-1]),
-                    xytext=(3, 3), textcoords="offset points",
-                    fontsize=12, color=C_ACCENT, fontweight="bold")
+    for spine in ("top", "right"):
+        ax.spines[spine].set_visible(False)
+    for spine in ("bottom", "left"):
+        ax.spines[spine].set_color(C_LIGHT)
+
+    ax.annotate(str(disp_solved[-1]), xy=(disp_dates[-1], disp_solved[-1]),
+                xytext=(3, 3), textcoords="offset points",
+                fontsize=12, color=C_ACCENT, fontweight="bold")
+
+
+def generate_progress_graph(history: list, stats: dict):
+    fig = plt.figure(figsize=(CANVAS_W, 5.5), facecolor="none")
+    ax = fig.add_axes([0.08, 0.18, 0.71, 0.68])
+    ax_r = fig.add_axes([0.81, 0.05, 0.17, 0.90])
+
+    for axis in (ax, ax_r):
+        axis.set_facecolor("none")
+
+    ax_r.axis("off")
+    ax_r.set_xlim(0, 1)
+    ax_r.set_ylim(0, 1)
+
+    latest = history[-1] if history else {
+        "solved": stats["solved"],
+        "solution_files": stats["solution_files"],
+        "platforms": stats["platforms"],
+    }
+    ax_r.text(0.05, 0.92, "Solved", fontsize=11, color=C_MUTED)
+    ax_r.text(0.05, 0.88, str(latest["solved"]),
+              fontsize=26, fontweight="bold", color=C_ACCENT, va="top")
+    ax_r.text(0.05, 0.72, "Files", fontsize=11, color=C_MUTED)
+    ax_r.text(0.05, 0.64, str(latest.get("solution_files", stats["solution_files"])),
+              fontsize=14, fontweight="bold", color=C_ACCENT)
+
+    platforms = latest.get("platforms", stats["platforms"])
+    y = 0.50
+    for platform, count in platforms.items():
+        ax_r.text(0.05, y, platform, fontsize=9.5, color=C_MUTED)
+        ax_r.text(0.95, y, str(count), fontsize=10.5, fontweight="bold",
+                  color=PLATFORM_COLOR.get(platform, C_ACCENT), ha="right")
+        y -= 0.085
+
+    if len(history) >= 2:
+        prev = history[-2]
+        delta = latest["solved"] - prev["solved"]
+        dc = "#16A34A" if delta > 0 else "#EF4444" if delta < 0 else C_MUTED
+        ds = f"+{delta} solved" if delta > 0 else f"{delta} solved" if delta < 0 else "0 solved"
+        ax_r.text(0.05, 0.58, ds, fontsize=11, color=dc, fontweight="bold")
+
+    if history:
+        draw_progress_axes(ax, history)
     else:
         ax.axis("off")
-        ax.text(0.5, 0.5, "Collecting Programmers progress...",
+        ax.text(0.5, 0.5, "Collecting problem-solving progress...",
                 ha="center", va="center", transform=ax.transAxes,
                 fontsize=12, color=C_MUTED)
 
-    ax.set_title("Programmers Progress", fontsize=17, color=C_ACCENT,
+    ax.set_title("Overall Progress", fontsize=17, color=C_ACCENT,
                  pad=5, fontweight="bold", loc="left")
 
-    plt.savefig(ASSETS_DIR / "rating_graph.svg",
+    plt.savefig(ASSETS_DIR / "progress_graph.svg",
                 format="svg", bbox_inches=None, pad_inches=0, transparent=True)
     plt.close()
-    print("  - rating_graph.svg")
+    print("  - progress_graph.svg")
 
 
 def main():
-    print("Collecting Programmers solutions from repo...")
-    stats = collect_programmers_stats()
+    print("Collecting problem solutions from repo...")
+    stats = collect_stats()
 
-    print("Updating Programmers history...")
+    print("Updating overall history...")
     history = update_history(stats)
 
     print("Generating SVGs...")
@@ -396,7 +399,7 @@ def main():
     generate_progress_graph(history, stats)
 
     print(
-        f"\nDone - {stats['handle']} · {stats['platform']} · "
+        f"\nDone - {stats['handle']} · Problem Solved · "
         f"{stats['solved']} solved · {stats['solution_files']} solution files"
     )
 
