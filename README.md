@@ -1,6 +1,6 @@
 # Programmers Solved
 
-프로그래머스 문제풀이 내역입니다. 기존 백준 풀이 기록은 `백준/` 폴더에 그대로 보관합니다.
+프로그래머스 문제풀이 내역입니다.
 
 <div align="center">
   <img src="assets/profile_card.svg" width="90%" alt="Profile Stats">
