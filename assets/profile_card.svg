@@ -6,11 +6,11 @@
   <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
    <cc:Work>
     <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
-    <dc:date>2026-06-11T17:59:10.939976</dc:date>
+    <dc:date>2026-06-12T17:29:32.404058</dc:date>
     <dc:format>image/svg+xml</dc:format>
     <dc:creator>
      <cc:Agent>
-      <dc:title>Matplotlib v3.10.9, https://matplotlib.org/</dc:title>
+      <dc:title>Matplotlib v3.11.0, https://matplotlib.org/</dc:title>
      </cc:Agent>
     </dc:creator>
    </cc:Work>
@@ -32,87 +32,87 @@ z
   <g id="axes_1">
    <g id="patch_2">
     <path d="M 179.712 26.439344 
-C 170.553789 26.439344 161.450503 27.856743 152.725828 30.641142 
-C 144.001153 33.42554 135.759739 37.543541 128.294626 42.84872 
-C 120.829514 48.153899 114.230244 54.582622 108.731469 61.906303 
-C 103.232693 69.229983 98.900367 77.360776 95.888536 86.009574 
-C 92.876706 94.658372 91.221495 103.721435 90.981761 112.876508 
-C 90.742026 122.031581 91.920641 131.168851 94.4757 139.963423 
-C 97.030758 148.757996 100.931612 157.104383 106.039558 164.705811 
-C 111.147505 172.30724 117.401276 179.072533 124.578505 184.761136 
-C 131.755734 190.44974 139.770333 194.993421 148.337326 198.23062 
-C 156.904319 201.467819 165.920949 203.359706 175.066609 203.839011 
-C 184.212268 204.318317 193.37726 203.379292 202.235703 201.055325 
-C 211.094145 198.731358 219.539785 195.050325 227.27232 190.143112 
-C 235.004854 185.235899 241.931534 179.161366 247.806067 172.135508 
-C 253.6806 165.109649 258.432523 157.216736 261.892871 148.737419 
-C 265.353219 140.258102 267.480486 131.294086 268.199034 122.164107 
-C 268.917582 113.034128 268.218791 103.847696 266.127508 94.931455 
-L 228.104685 103.849615 
-C 229.275803 108.84271 229.667126 113.987112 229.264739 119.0999 
-C 228.862352 124.212688 227.671083 129.232537 225.733288 133.980955 
-C 223.795493 138.729372 221.134416 143.149403 217.844678 147.083884 
-C 214.554939 151.018365 210.675998 154.420103 206.345779 157.168143 
-C 202.01556 159.916182 197.286001 161.977561 192.325274 163.278982 
-C 187.364546 164.580403 182.23215 165.106258 177.110581 164.837846 
-C 171.989011 164.569435 166.939699 163.509978 162.142183 161.697147 
-C 157.344667 159.884316 152.856491 157.339854 148.837243 154.154236 
-C 144.817994 150.968618 141.315883 147.180054 138.455433 142.923254 
-C 135.594983 138.666455 133.410505 133.992478 131.979672 129.067517 
-C 130.548839 124.142557 129.888814 119.025685 130.023066 113.898845 
-C 130.157317 108.772004 131.084235 103.696688 132.77086 98.853361 
-C 134.457486 94.010035 136.883588 89.456791 139.962902 85.35553 
-C 143.042217 81.254269 146.737808 77.654184 150.918271 74.683283 
-C 155.098734 71.712383 159.713926 69.406303 164.599744 67.847039 
+C 170.553789 26.439344 161.450501 27.856743 152.725826 30.641142 
+C 144.001151 33.425541 135.759736 37.543543 128.294623 42.848722 
+C 120.829511 48.153902 114.230241 54.582626 108.731465 61.906307 
+C 103.23269 69.229988 98.900364 77.360782 95.888534 86.009581 
+C 92.876704 94.658379 91.221494 103.721444 90.98176 112.876517 
+C 90.742026 122.03159 91.920643 131.168861 94.475703 139.963434 
+C 97.030762 148.758006 100.931618 157.104394 106.039565 164.705822 
+C 111.147513 172.30725 117.401285 179.072542 124.578516 184.761145 
+C 131.755746 190.449748 139.770347 194.993428 148.337341 198.230626 
+C 156.904335 201.467823 165.920966 203.359709 175.066626 203.839012 
+C 184.212287 204.318316 193.377279 203.379289 202.235722 201.05532 
+C 211.094164 198.731351 219.539804 195.050315 227.272338 190.1431 
+C 235.004871 185.235885 241.931551 179.161351 247.806082 172.13549 
+C 253.680613 165.109629 258.432534 157.216715 261.89288 148.737396 
+C 265.353226 140.258077 267.480491 131.294061 268.199036 122.164081 
+C 268.917581 113.034101 268.218787 103.847669 266.127502 94.931427 
+L 228.104681 103.849599 
+C 229.275801 108.842694 229.667125 113.987097 229.26474 119.099885 
+C 228.862355 124.212674 227.671087 129.232523 225.733293 133.980942 
+C 223.795499 138.72936 221.134423 143.149392 217.844686 147.083874 
+C 214.554948 151.018356 210.676008 154.420096 206.345789 157.168136 
+C 202.01557 159.916177 197.286012 161.977557 192.325284 163.278979 
+C 187.364556 164.580402 182.232161 165.106257 177.110591 164.837847 
+C 171.989021 164.569437 166.939708 163.509981 162.142191 161.69715 
+C 157.344674 159.88432 152.856498 157.339859 148.837249 154.154241 
+C 144.818 150.968624 141.315887 147.18006 138.455437 142.92326 
+C 135.594986 138.66646 133.410507 133.992483 131.979674 129.067523 
+C 130.54884 124.142562 129.888815 119.02569 130.023066 113.898849 
+C 130.157317 108.772008 131.084234 103.696692 132.770859 98.853365 
+C 134.457484 94.010038 136.883586 89.456793 139.962901 85.355532 
+C 143.042215 81.25427 146.737806 77.654185 150.918269 74.683285 
+C 155.098732 71.712384 159.713924 69.406303 164.599743 67.84704 
 C 169.485561 66.287776 174.583402 65.494033 179.712 65.494033 
 z
 " style="fill: #9b4f96; stroke: #ffffff; stroke-width: 0.8; stroke-linejoin: miter"/>
    </g>
    <g id="patch_3">
-    <path d="M 266.12751 94.931458 
-C 263.858209 85.256219 259.980047 76.030435 254.655106 67.639667 
-C 249.330165 59.248896 242.633665 51.811688 234.845466 45.638841 
-L 210.586741 76.245751 
-C 214.948132 79.702545 218.698172 83.867382 221.680139 88.566213 
-C 224.662106 93.265044 226.833877 98.431483 228.104685 103.849617 
+    <path d="M 266.127502 94.931427 
+C 263.858197 85.256197 259.980039 76.030422 254.6551 67.639662 
+C 249.330162 59.248902 242.633671 51.811696 234.845484 45.638855 
+L 210.586751 76.245759 
+C 214.948136 79.70255 218.698171 83.867385 221.680136 88.566211 
+C 224.662102 93.265037 226.83387 98.43147 228.104681 103.849599 
 z
 " style="fill: #f34b7d; stroke: #ffffff; stroke-width: 0.8; stroke-linejoin: miter"/>
    </g>
    <g id="patch_4">
-    <path d="M 234.845466 45.638841 
-C 229.984749 41.786286 224.733569 38.453786 219.178073 35.696019 
-C 213.622581 32.938253 207.793321 30.770371 201.785858 29.227918 
-L 192.07336 67.055634 
-C 195.43754 67.919408 198.701925 69.133421 201.813001 70.677771 
-C 204.924078 72.22212 207.864739 74.08832 210.586741 76.245751 
+    <path d="M 234.845484 45.638855 
+C 229.984767 41.786297 224.733601 38.453807 219.17811 35.696037 
+C 213.622619 32.938267 207.79334 30.770378 201.785877 29.227923 
+L 192.073371 67.055637 
+C 195.437551 67.919412 198.701947 69.13343 201.813022 70.677781 
+C 204.924097 72.222132 207.864749 74.088327 210.586751 76.245759 
 z
 " style="fill: #f1e05a; stroke: #ffffff; stroke-width: 0.8; stroke-linejoin: miter"/>
    </g>
    <g id="patch_5">
-    <path d="M 201.785858 29.227918 
-C 199.384715 28.61141 196.958817 28.095772 194.514507 27.682348 
-C 192.070198 27.268923 189.609619 26.958077 187.139288 26.75064 
-L 183.871281 65.668358 
-C 185.254667 65.784523 186.632591 65.958597 188.001404 66.190115 
-C 189.370217 66.421632 190.72872 66.71039 192.07336 67.055634 
+    <path d="M 201.785877 29.227923 
+C 199.384733 28.611414 196.958815 28.095769 194.514503 27.682345 
+C 192.070192 27.268921 189.609633 26.95808 187.1393 26.75064 
+L 183.871288 65.668359 
+C 185.254675 65.784525 186.632588 65.958596 188.001402 66.190113 
+C 189.370216 66.421631 190.728731 66.710392 192.073371 67.055637 
 z
 " style="fill: #3572a5; stroke: #ffffff; stroke-width: 0.8; stroke-linejoin: miter"/>
    </g>
    <g id="patch_6">
-    <path d="M 187.139288 26.75064 
-C 185.904261 26.646935 184.667196 26.5691 183.42891 26.5172 
-C 182.190624 26.4653 180.951386 26.439344 179.712012 26.439344 
-L 179.712007 65.494033 
-C 180.406056 65.494033 181.100029 65.508568 181.79347 65.537632 
-C 182.48691 65.566696 183.179666 65.610283 183.871281 65.668358 
+    <path d="M 187.1393 26.75064 
+C 185.904269 26.646932 184.667201 26.569102 183.42891 26.517202 
+C 182.19062 26.465303 180.951378 26.439344 179.712 26.439344 
+L 179.712 65.494033 
+C 180.406052 65.494033 181.100027 65.50857 181.79347 65.537633 
+C 182.486913 65.566697 183.179671 65.610282 183.871288 65.668359 
 z
 " style="fill: #6e6e6e; stroke: #ffffff; stroke-width: 0.8; stroke-linejoin: miter"/>
    </g>
    <g id="text_1">
     <!-- 72 -->
-    <g style="fill: #4f46e5" transform="translate(159.312 117.449148) scale(0.34 -0.34)">
+    <g style="fill: #4f46e5" transform="translate(159.312 120.339148) scale(0.34 -0.34)">
      <defs>
-      <path id="JetBrainsMono-Bold-37" d="M 1011 0 
+      <path id="JetBrainsMono-Bold-2db" d="M 1011 0 
 L 2720 3968 
 L 1229 3968 
 L 1229 3206 
@@ -124,7 +124,7 @@ L 1888 0
 L 1011 0 
 z
 " transform="scale(0.015625)"/>
-      <path id="JetBrainsMono-Bold-32" d="M 474 0 
+      <path id="JetBrainsMono-Bold-2d6" d="M 474 0 
 L 474 723 
 L 2157 2445 
 Q 2566 2874 2566 3315 
@@ -148,15 +148,15 @@ L 474 0
 z
 " transform="scale(0.015625)"/>
      </defs>
-     <use xlink:href="#JetBrainsMono-Bold-37"/>
-     <use xlink:href="#JetBrainsMono-Bold-32" transform="translate(59.999985 0)"/>
+     <use xlink:href="#JetBrainsMono-Bold-2db"/>
+     <use xlink:href="#JetBrainsMono-Bold-2d6" transform="translate(60 0)"/>
     </g>
    </g>
    <g id="text_2">
     <!-- solved -->
-    <g style="fill: #667085" transform="translate(159.912 132.426705) scale(0.11 -0.11)">
+    <g style="fill: #667085" transform="translate(159.912 133.361705) scale(0.11 -0.11)">
      <defs>
-      <path id="JetBrainsMono-Regular-73" d="M 1779 -51 
+      <path id="JetBrainsMono-Regular-144" d="M 1779 -51 
 Q 1190 -51 867 214 
 Q 544 480 544 966 
 L 1120 966 
@@ -188,7 +188,7 @@ Q 2650 -51 2061 -51
 L 1779 -51 
 z
 " transform="scale(0.015625)"/>
-      <path id="JetBrainsMono-Regular-6f" d="M 1920 -51 
+      <path id="JetBrainsMono-Regular-122" d="M 1920 -51 
 Q 1286 -51 912 320 
 Q 538 691 538 1357 
 L 538 2163 
@@ -213,7 +213,7 @@ Q 1114 883 1331 672
 Q 1549 461 1920 461 
 z
 " transform="scale(0.015625)"/>
-      <path id="JetBrainsMono-Regular-6c" d="M 2432 0 
+      <path id="JetBrainsMono-Regular-113" d="M 2432 0 
 Q 1965 0 1686 272 
 Q 1408 544 1408 992 
 L 1408 4147 
@@ -228,7 +228,7 @@ L 3520 0
 L 2432 0 
 z
 " transform="scale(0.015625)"/>
-      <path id="JetBrainsMono-Regular-76" d="M 1542 0 
+      <path id="JetBrainsMono-Regular-169" d="M 1542 0 
 L 346 3520 
 L 966 3520 
 L 1734 1152 
@@ -242,7 +242,7 @@ L 2298 0
 L 1542 0 
 z
 " transform="scale(0.015625)"/>
-      <path id="JetBrainsMono-Regular-65" d="M 1920 -64 
+      <path id="JetBrainsMono-Regular-e1" d="M 1920 -64 
 Q 1299 -64 918 310 
 Q 538 685 538 1344 
 L 538 2176 
@@ -272,7 +272,7 @@ Q 1101 2656 1101 2240
 L 1101 2061 
 z
 " transform="scale(0.015625)"/>
-      <path id="JetBrainsMono-Regular-64" d="M 1715 -64 
+      <path id="JetBrainsMono-Regular-dd" d="M 1715 -64 
 Q 1190 -64 873 288 
 Q 557 640 557 1242 
 L 557 2272 
@@ -305,12 +305,12 @@ Q 1542 435 1907 435
 z
 " transform="scale(0.015625)"/>
      </defs>
-     <use xlink:href="#JetBrainsMono-Regular-73"/>
-     <use xlink:href="#JetBrainsMono-Regular-6f" transform="translate(59.999985 0)"/>
-     <use xlink:href="#JetBrainsMono-Regular-6c" transform="translate(119.999969 0)"/>
-     <use xlink:href="#JetBrainsMono-Regular-76" transform="translate(179.999954 0)"/>
-     <use xlink:href="#JetBrainsMono-Regular-65" transform="translate(239.999939 0)"/>
-     <use xlink:href="#JetBrainsMono-Regular-64" transform="translate(299.999924 0)"/>
+     <use xlink:href="#JetBrainsMono-Regular-144"/>
+     <use xlink:href="#JetBrainsMono-Regular-122" transform="translate(60 0)"/>
+     <use xlink:href="#JetBrainsMono-Regular-113" transform="translate(120 0)"/>
+     <use xlink:href="#JetBrainsMono-Regular-169" transform="translate(180 0)"/>
+     <use xlink:href="#JetBrainsMono-Regular-e1" transform="translate(240 0)"/>
+     <use xlink:href="#JetBrainsMono-Regular-dd" transform="translate(300 0)"/>
     </g>
    </g>
   </g>
@@ -326,22 +326,22 @@ Q 358.207488 197.31456 358.207488 200.01024
 L 358.207488 211.20768 
 Q 358.207488 213.90336 362.520576 213.90336 
 z
-" clip-path="url(#p6c89463079)" style="fill: #d0d5dd; opacity: 0.4"/>
+" clip-path="url(#pe7c9dd4892)" style="fill: #d0d5dd; opacity: 0.4"/>
    </g>
    <g id="line2d_1">
     <path d="M 358.87104 111.46752 
 L 664.10496 111.46752 
-" clip-path="url(#p6c89463079)" style="fill: none; stroke: #d0d5dd; stroke-width: 0.8; stroke-linecap: square"/>
+" clip-path="url(#pe7c9dd4892)" style="fill: none; stroke: #d0d5dd; stroke-width: 0.8; stroke-linecap: square"/>
    </g>
    <g id="line2d_2">
     <path d="M 358.87104 137.38752 
 L 664.10496 137.38752 
-" clip-path="url(#p6c89463079)" style="fill: none; stroke: #d0d5dd; stroke-width: 0.8; stroke-linecap: square"/>
+" clip-path="url(#pe7c9dd4892)" style="fill: none; stroke: #d0d5dd; stroke-width: 0.8; stroke-linecap: square"/>
    </g>
    <g id="line2d_3">
     <path d="M 358.87104 163.30752 
 L 664.10496 163.30752 
-" clip-path="url(#p6c89463079)" style="fill: none; stroke: #d0d5dd; stroke-width: 0.8; stroke-linecap: square"/>
+" clip-path="url(#pe7c9dd4892)" style="fill: none; stroke: #d0d5dd; stroke-width: 0.8; stroke-linecap: square"/>
    </g>
    <g id="patch_8">
     <path d="M 362.454221 212.45184 
@@ -354,7 +354,7 @@ Q 359.468237 198.76608 359.468237 200.63232
 L 359.468237 210.5856 
 Q 359.468237 212.45184 362.454221 212.45184 
 z
-" clip-path="url(#p6c89463079)" style="fill: #9b4f96"/>
+" clip-path="url(#pe7c9dd4892)" style="fill: #9b4f96"/>
    </g>
    <g id="patch_9">
     <path d="M 602.571571 212.45184 
@@ -367,7 +367,7 @@ Q 599.585587 198.76608 599.585587 200.63232
 L 599.585587 210.5856 
 Q 599.585587 212.45184 602.571571 212.45184 
 z
-" clip-path="url(#p6c89463079)" style="fill: #f34b7d"/>
+" clip-path="url(#pe7c9dd4892)" style="fill: #f34b7d"/>
    </g>
    <g id="patch_10">
     <path d="M 635.129856 212.45184 
@@ -380,7 +380,7 @@ Q 632.143872 198.76608 632.143872 200.63232
 L 632.143872 210.5856 
 Q 632.143872 212.45184 635.129856 212.45184 
 z
-" clip-path="url(#p6c89463079)" style="fill: #f1e05a"/>
+" clip-path="url(#pe7c9dd4892)" style="fill: #f1e05a"/>
    </g>
    <g id="patch_11">
     <path d="M 655.478784 212.45184 
@@ -393,7 +393,7 @@ Q 652.4928 198.76608 652.4928 200.63232
 L 652.4928 210.5856 
 Q 652.4928 212.45184 655.478784 212.45184 
 z
-" clip-path="url(#p6c89463079)" style="fill: #3572a5"/>
+" clip-path="url(#pe7c9dd4892)" style="fill: #3572a5"/>
    </g>
    <g id="patch_12">
     <path d="M 663.618355 212.45184 
@@ -406,13 +406,13 @@ Q 660.632371 198.76608 660.632371 200.63232
 L 660.632371 210.5856 
 Q 660.632371 212.45184 663.618355 212.45184 
 z
-" clip-path="url(#p6c89463079)" style="fill: #6e6e6e"/>
+" clip-path="url(#pe7c9dd4892)" style="fill: #6e6e6e"/>
    </g>
    <g id="text_3">
     <!-- sernn -->
-    <g style="fill: #344054" transform="translate(358.87104 39.131) scale(0.25 -0.25)">
+    <g style="fill: #344054" transform="translate(358.87104 41.256) scale(0.25 -0.25)">
      <defs>
-      <path id="JetBrainsMono-Bold-73" d="M 1773 -58 
+      <path id="JetBrainsMono-Bold-144" d="M 1773 -58 
 Q 1146 -58 781 227 
 Q 416 512 416 998 
 L 1203 998 
@@ -447,7 +447,7 @@ Q 2726 -58 2054 -58
 L 1773 -58 
 z
 " transform="scale(0.015625)"/>
-      <path id="JetBrainsMono-Bold-65" d="M 1926 -64 
+      <path id="JetBrainsMono-Bold-e1" d="M 1926 -64 
 Q 1478 -64 1145 109 
 Q 813 282 630 598 
 Q 448 915 448 1344 
@@ -479,7 +479,7 @@ Q 1574 2970 1395 2768
 Q 1216 2566 1216 2202 
 z
 " transform="scale(0.015625)"/>
-      <path id="JetBrainsMono-Bold-72" d="M 621 0 
+      <path id="JetBrainsMono-Bold-140" d="M 621 0 
 L 621 3520 
 L 1402 3520 
 L 1402 2835 
@@ -498,7 +498,7 @@ L 1421 0
 L 621 0 
 z
 " transform="scale(0.015625)"/>
-      <path id="JetBrainsMono-Bold-6e" d="M 493 0 
+      <path id="JetBrainsMono-Bold-11b" d="M 493 0 
 L 493 3520 
 L 1274 3520 
 L 1274 2861 
@@ -518,18 +518,18 @@ L 493 0
 z
 " transform="scale(0.015625)"/>
      </defs>
-     <use xlink:href="#JetBrainsMono-Bold-73"/>
-     <use xlink:href="#JetBrainsMono-Bold-65" transform="translate(59.999985 0)"/>
-     <use xlink:href="#JetBrainsMono-Bold-72" transform="translate(119.999969 0)"/>
-     <use xlink:href="#JetBrainsMono-Bold-6e" transform="translate(179.999954 0)"/>
-     <use xlink:href="#JetBrainsMono-Bold-6e" transform="translate(239.999939 0)"/>
+     <use xlink:href="#JetBrainsMono-Bold-144"/>
+     <use xlink:href="#JetBrainsMono-Bold-e1" transform="translate(60 0)"/>
+     <use xlink:href="#JetBrainsMono-Bold-140" transform="translate(120 0)"/>
+     <use xlink:href="#JetBrainsMono-Bold-11b" transform="translate(180 0)"/>
+     <use xlink:href="#JetBrainsMono-Bold-11b" transform="translate(240 0)"/>
     </g>
    </g>
    <g id="text_4">
     <!-- Problem Solved -->
-    <g style="fill: #4f46e5" transform="translate(554.90496 64.8614) scale(0.13 -0.13)">
+    <g style="fill: #4f46e5" transform="translate(554.90496 65.9664) scale(0.13 -0.13)">
      <defs>
-      <path id="JetBrainsMono-Bold-50" d="M 493 0 
+      <path id="JetBrainsMono-Bold-7a" d="M 493 0 
 L 493 4672 
 L 2048 4672 
 Q 2515 4672 2864 4493 
@@ -552,7 +552,7 @@ L 1293 3968
 L 1293 2496 
 z
 " transform="scale(0.015625)"/>
-      <path id="JetBrainsMono-Bold-6f" d="M 1920 -58 
+      <path id="JetBrainsMono-Bold-122" d="M 1920 -58 
 Q 1242 -58 845 323 
 Q 448 704 448 1350 
 L 448 2170 
@@ -577,7 +577,7 @@ Q 1248 992 1424 816
 Q 1600 640 1920 640 
 z
 " transform="scale(0.015625)"/>
-      <path id="JetBrainsMono-Bold-62" d="M 2240 -64 
+      <path id="JetBrainsMono-Bold-d6" d="M 2240 -64 
 Q 1869 -64 1619 121 
 Q 1370 307 1274 640 
 L 1274 0 
@@ -607,7 +607,7 @@ Q 1293 998 1462 812
 Q 1632 627 1939 627 
 z
 " transform="scale(0.015625)"/>
-      <path id="JetBrainsMono-Bold-6c" d="M 2490 0 
+      <path id="JetBrainsMono-Bold-113" d="M 2490 0 
 Q 1965 0 1648 313 
 Q 1331 627 1331 1139 
 L 1331 3949 
@@ -622,7 +622,7 @@ L 3578 0
 L 2490 0 
 z
 " transform="scale(0.015625)"/>
-      <path id="JetBrainsMono-Bold-6d" d="M 301 0 
+      <path id="JetBrainsMono-Bold-11a" d="M 301 0 
 L 301 3520 
 L 966 3520 
 L 966 3008 
@@ -651,8 +651,8 @@ L 1005 0
 L 301 0 
 z
 " transform="scale(0.015625)"/>
-      <path id="JetBrainsMono-Bold-20" transform="scale(0.015625)"/>
-      <path id="JetBrainsMono-Bold-53" d="M 1939 -64 
+      <path id="JetBrainsMono-Bold-3be" transform="scale(0.015625)"/>
+      <path id="JetBrainsMono-Bold-81" d="M 1939 -64 
 Q 1466 -64 1110 102 
 Q 755 269 560 579 
 Q 365 890 365 1318 
@@ -686,7 +686,7 @@ Q 3098 275 2752 105
 Q 2406 -64 1939 -64 
 z
 " transform="scale(0.015625)"/>
-      <path id="JetBrainsMono-Bold-76" d="M 1414 0 
+      <path id="JetBrainsMono-Bold-169" d="M 1414 0 
 L 230 3520 
 L 1069 3520 
 L 1747 1382 
@@ -700,7 +700,7 @@ L 2432 0
 L 1414 0 
 z
 " transform="scale(0.015625)"/>
-      <path id="JetBrainsMono-Bold-64" d="M 1600 -64 
+      <path id="JetBrainsMono-Bold-dd" d="M 1600 -64 
 Q 1088 -64 771 301 
 Q 454 666 454 1280 
 L 454 2234 
@@ -731,27 +731,27 @@ Q 1594 627 1901 627
 z
 " transform="scale(0.015625)"/>
      </defs>
-     <use xlink:href="#JetBrainsMono-Bold-50"/>
-     <use xlink:href="#JetBrainsMono-Bold-72" transform="translate(59.999985 0)"/>
-     <use xlink:href="#JetBrainsMono-Bold-6f" transform="translate(119.999969 0)"/>
-     <use xlink:href="#JetBrainsMono-Bold-62" transform="translate(179.999954 0)"/>
-     <use xlink:href="#JetBrainsMono-Bold-6c" transform="translate(239.999939 0)"/>
-     <use xlink:href="#JetBrainsMono-Bold-65" transform="translate(299.999924 0)"/>
-     <use xlink:href="#JetBrainsMono-Bold-6d" transform="translate(359.999908 0)"/>
-     <use xlink:href="#JetBrainsMono-Bold-20" transform="translate(419.999893 0)"/>
-     <use xlink:href="#JetBrainsMono-Bold-53" transform="translate(479.999878 0)"/>
-     <use xlink:href="#JetBrainsMono-Bold-6f" transform="translate(539.999863 0)"/>
-     <use xlink:href="#JetBrainsMono-Bold-6c" transform="translate(599.999847 0)"/>
-     <use xlink:href="#JetBrainsMono-Bold-76" transform="translate(659.999832 0)"/>
-     <use xlink:href="#JetBrainsMono-Bold-65" transform="translate(719.999817 0)"/>
-     <use xlink:href="#JetBrainsMono-Bold-64" transform="translate(779.999802 0)"/>
+     <use xlink:href="#JetBrainsMono-Bold-7a"/>
+     <use xlink:href="#JetBrainsMono-Bold-140" transform="translate(60 0)"/>
+     <use xlink:href="#JetBrainsMono-Bold-122" transform="translate(120 0)"/>
+     <use xlink:href="#JetBrainsMono-Bold-d6" transform="translate(180 0)"/>
+     <use xlink:href="#JetBrainsMono-Bold-113" transform="translate(240 0)"/>
+     <use xlink:href="#JetBrainsMono-Bold-e1" transform="translate(300 0)"/>
+     <use xlink:href="#JetBrainsMono-Bold-11a" transform="translate(360 0)"/>
+     <use xlink:href="#JetBrainsMono-Bold-3be" transform="translate(420 0)"/>
+     <use xlink:href="#JetBrainsMono-Bold-81" transform="translate(480 0)"/>
+     <use xlink:href="#JetBrainsMono-Bold-122" transform="translate(540 0)"/>
+     <use xlink:href="#JetBrainsMono-Bold-113" transform="translate(600 0)"/>
+     <use xlink:href="#JetBrainsMono-Bold-169" transform="translate(660 0)"/>
+     <use xlink:href="#JetBrainsMono-Bold-e1" transform="translate(720 0)"/>
+     <use xlink:href="#JetBrainsMono-Bold-dd" transform="translate(780 0)"/>
     </g>
    </g>
    <g id="text_5">
     <!-- Total -->
-    <g style="fill: #667085" transform="translate(358.87104 101.1962) scale(0.094 -0.094)">
+    <g style="fill: #667085" transform="translate(358.87104 101.9952) scale(0.094 -0.094)">
      <defs>
-      <path id="JetBrainsMono-Regular-54" d="M 1632 0 
+      <path id="JetBrainsMono-Regular-89" d="M 1632 0 
 L 1632 4147 
 L 352 4147 
 L 352 4672 
@@ -762,7 +762,7 @@ L 2208 0
 L 1632 0 
 z
 " transform="scale(0.015625)"/>
-      <path id="JetBrainsMono-Regular-74" d="M 2272 0 
+      <path id="JetBrainsMono-Regular-14c" d="M 2272 0 
 Q 1837 0 1574 253 
 Q 1312 506 1312 928 
 L 1312 2995 
@@ -783,7 +783,7 @@ L 3296 0
 L 2272 0 
 z
 " transform="scale(0.015625)"/>
-      <path id="JetBrainsMono-Regular-61" d="M 1613 -64 
+      <path id="JetBrainsMono-Regular-bd" d="M 1613 -64 
 Q 1069 -64 749 240 
 Q 429 544 429 1037 
 Q 429 1363 576 1606 
@@ -818,32 +818,32 @@ Q 1408 422 1754 422
 z
 " transform="scale(0.015625)"/>
      </defs>
-     <use xlink:href="#JetBrainsMono-Regular-54"/>
-     <use xlink:href="#JetBrainsMono-Regular-6f" transform="translate(59.999985 0)"/>
-     <use xlink:href="#JetBrainsMono-Regular-74" transform="translate(119.999969 0)"/>
-     <use xlink:href="#JetBrainsMono-Regular-61" transform="translate(179.999954 0)"/>
-     <use xlink:href="#JetBrainsMono-Regular-6c" transform="translate(239.999939 0)"/>
+     <use xlink:href="#JetBrainsMono-Regular-89"/>
+     <use xlink:href="#JetBrainsMono-Regular-122" transform="translate(60 0)"/>
+     <use xlink:href="#JetBrainsMono-Regular-14c" transform="translate(120 0)"/>
+     <use xlink:href="#JetBrainsMono-Regular-bd" transform="translate(180 0)"/>
+     <use xlink:href="#JetBrainsMono-Regular-113" transform="translate(240 0)"/>
     </g>
    </g>
    <g id="text_6">
     <!-- 72 solved -->
-    <g style="fill: #344054" transform="translate(600.38496 101.8562) scale(0.118 -0.118)">
-     <use xlink:href="#JetBrainsMono-Bold-37"/>
-     <use xlink:href="#JetBrainsMono-Bold-32" transform="translate(59.999985 0)"/>
-     <use xlink:href="#JetBrainsMono-Bold-20" transform="translate(119.999969 0)"/>
-     <use xlink:href="#JetBrainsMono-Bold-73" transform="translate(179.999954 0)"/>
-     <use xlink:href="#JetBrainsMono-Bold-6f" transform="translate(239.999939 0)"/>
-     <use xlink:href="#JetBrainsMono-Bold-6c" transform="translate(299.999924 0)"/>
-     <use xlink:href="#JetBrainsMono-Bold-76" transform="translate(359.999908 0)"/>
-     <use xlink:href="#JetBrainsMono-Bold-65" transform="translate(419.999893 0)"/>
-     <use xlink:href="#JetBrainsMono-Bold-64" transform="translate(479.999878 0)"/>
+    <g style="fill: #344054" transform="translate(600.38496 102.8592) scale(0.118 -0.118)">
+     <use xlink:href="#JetBrainsMono-Bold-2db"/>
+     <use xlink:href="#JetBrainsMono-Bold-2d6" transform="translate(60 0)"/>
+     <use xlink:href="#JetBrainsMono-Bold-3be" transform="translate(120 0)"/>
+     <use xlink:href="#JetBrainsMono-Bold-144" transform="translate(180 0)"/>
+     <use xlink:href="#JetBrainsMono-Bold-122" transform="translate(240 0)"/>
+     <use xlink:href="#JetBrainsMono-Bold-113" transform="translate(300 0)"/>
+     <use xlink:href="#JetBrainsMono-Bold-169" transform="translate(360 0)"/>
+     <use xlink:href="#JetBrainsMono-Bold-e1" transform="translate(420 0)"/>
+     <use xlink:href="#JetBrainsMono-Bold-dd" transform="translate(480 0)"/>
     </g>
    </g>
    <g id="text_7">
     <!-- Baekjoon -->
-    <g style="fill: #667085" transform="translate(358.87104 127.337247) scale(0.094 -0.094)">
+    <g style="fill: #667085" transform="translate(358.87104 127.9152) scale(0.094 -0.094)">
      <defs>
-      <path id="JetBrainsMono-Regular-42" d="M 595 0 
+      <path id="JetBrainsMono-Regular-1a" d="M 595 0 
 L 595 4672 
 L 1920 4672 
 Q 2560 4672 2921 4352 
@@ -877,7 +877,7 @@ L 1158 2182
 L 1158 518 
 z
 " transform="scale(0.015625)"/>
-      <path id="JetBrainsMono-Regular-6b" d="M 621 0 
+      <path id="JetBrainsMono-Regular-110" d="M 621 0 
 L 621 4672 
 L 1197 4672 
 L 1197 2067 
@@ -893,7 +893,7 @@ L 1197 0
 L 621 0 
 z
 " transform="scale(0.015625)"/>
-      <path id="JetBrainsMono-Regular-6a" d="M 576 -1152 
+      <path id="JetBrainsMono-Regular-10d" d="M 576 -1152 
 L 576 -627 
 L 1370 -627 
 Q 1766 -627 1987 -409 
@@ -918,7 +918,7 @@ Q 2886 4371 2764 4262
 Q 2643 4154 2432 4154 
 z
 " transform="scale(0.015625)"/>
-      <path id="JetBrainsMono-Regular-6e" d="M 589 0 
+      <path id="JetBrainsMono-Regular-11b" d="M 589 0 
 L 589 3520 
 L 1165 3520 
 L 1165 2848 
@@ -939,21 +939,21 @@ L 589 0
 z
 " transform="scale(0.015625)"/>
      </defs>
-     <use xlink:href="#JetBrainsMono-Regular-42"/>
-     <use xlink:href="#JetBrainsMono-Regular-61" transform="translate(59.999985 0)"/>
-     <use xlink:href="#JetBrainsMono-Regular-65" transform="translate(119.999969 0)"/>
-     <use xlink:href="#JetBrainsMono-Regular-6b" transform="translate(179.999954 0)"/>
-     <use xlink:href="#JetBrainsMono-Regular-6a" transform="translate(239.999939 0)"/>
-     <use xlink:href="#JetBrainsMono-Regular-6f" transform="translate(299.999924 0)"/>
-     <use xlink:href="#JetBrainsMono-Regular-6f" transform="translate(359.999908 0)"/>
-     <use xlink:href="#JetBrainsMono-Regular-6e" transform="translate(419.999893 0)"/>
+     <use xlink:href="#JetBrainsMono-Regular-1a"/>
+     <use xlink:href="#JetBrainsMono-Regular-bd" transform="translate(60 0)"/>
+     <use xlink:href="#JetBrainsMono-Regular-e1" transform="translate(120 0)"/>
+     <use xlink:href="#JetBrainsMono-Regular-110" transform="translate(180 0)"/>
+     <use xlink:href="#JetBrainsMono-Regular-10d" transform="translate(240 0)"/>
+     <use xlink:href="#JetBrainsMono-Regular-122" transform="translate(300 0)"/>
+     <use xlink:href="#JetBrainsMono-Regular-122" transform="translate(360 0)"/>
+     <use xlink:href="#JetBrainsMono-Regular-11b" transform="translate(420 0)"/>
     </g>
    </g>
    <g id="text_8">
     <!-- 59 solved -->
-    <g style="fill: #344054" transform="translate(600.38496 127.7762) scale(0.118 -0.118)">
+    <g style="fill: #344054" transform="translate(600.38496 128.7792) scale(0.118 -0.118)">
      <defs>
-      <path id="JetBrainsMono-Bold-35" d="M 1894 -64 
+      <path id="JetBrainsMono-Bold-2d9" d="M 1894 -64 
 Q 1210 -64 803 297 
 Q 397 659 397 1280 
 L 1197 1280 
@@ -978,7 +978,7 @@ Q 3392 666 2992 301
 Q 2592 -64 1894 -64 
 z
 " transform="scale(0.015625)"/>
-      <path id="JetBrainsMono-Bold-39" d="M 1120 0 
+      <path id="JetBrainsMono-Bold-2dd" d="M 1120 0 
 L 2214 1888 
 Q 2138 1830 2035 1788 
 Q 1933 1747 1728 1747 
@@ -1008,22 +1008,22 @@ Q 1562 2387 1920 2387
 z
 " transform="scale(0.015625)"/>
      </defs>
-     <use xlink:href="#JetBrainsMono-Bold-35"/>
-     <use xlink:href="#JetBrainsMono-Bold-39" transform="translate(59.999985 0)"/>
-     <use xlink:href="#JetBrainsMono-Bold-20" transform="translate(119.999969 0)"/>
-     <use xlink:href="#JetBrainsMono-Bold-73" transform="translate(179.999954 0)"/>
-     <use xlink:href="#JetBrainsMono-Bold-6f" transform="translate(239.999939 0)"/>
-     <use xlink:href="#JetBrainsMono-Bold-6c" transform="translate(299.999924 0)"/>
-     <use xlink:href="#JetBrainsMono-Bold-76" transform="translate(359.999908 0)"/>
-     <use xlink:href="#JetBrainsMono-Bold-65" transform="translate(419.999893 0)"/>
-     <use xlink:href="#JetBrainsMono-Bold-64" transform="translate(479.999878 0)"/>
+     <use xlink:href="#JetBrainsMono-Bold-2d9"/>
+     <use xlink:href="#JetBrainsMono-Bold-2dd" transform="translate(60 0)"/>
+     <use xlink:href="#JetBrainsMono-Bold-3be" transform="translate(120 0)"/>
+     <use xlink:href="#JetBrainsMono-Bold-144" transform="translate(180 0)"/>
+     <use xlink:href="#JetBrainsMono-Bold-122" transform="translate(240 0)"/>
+     <use xlink:href="#JetBrainsMono-Bold-113" transform="translate(300 0)"/>
+     <use xlink:href="#JetBrainsMono-Bold-169" transform="translate(360 0)"/>
+     <use xlink:href="#JetBrainsMono-Bold-e1" transform="translate(420 0)"/>
+     <use xlink:href="#JetBrainsMono-Bold-dd" transform="translate(480 0)"/>
     </g>
    </g>
    <g id="text_9">
     <!-- Programmers -->
-    <g style="fill: #667085" transform="translate(358.87104 153.0362) scale(0.094 -0.094)">
+    <g style="fill: #667085" transform="translate(358.87104 153.8352) scale(0.094 -0.094)">
      <defs>
-      <path id="JetBrainsMono-Regular-50" d="M 589 0 
+      <path id="JetBrainsMono-Regular-7a" d="M 589 0 
 L 589 4672 
 L 2093 4672 
 Q 2746 4672 3133 4297 
@@ -1044,7 +1044,7 @@ L 1165 4154
 L 1165 2438 
 z
 " transform="scale(0.015625)"/>
-      <path id="JetBrainsMono-Regular-72" d="M 717 0 
+      <path id="JetBrainsMono-Regular-140" d="M 717 0 
 L 717 3520 
 L 1293 3520 
 L 1293 2848 
@@ -1063,7 +1063,7 @@ L 1293 0
 L 717 0 
 z
 " transform="scale(0.015625)"/>
-      <path id="JetBrainsMono-Regular-67" d="M 1030 -1152 
+      <path id="JetBrainsMono-Regular-f5" d="M 1030 -1152 
 L 1030 -627 
 L 2022 -627 
 Q 2323 -627 2496 -457 
@@ -1101,7 +1101,7 @@ Q 1139 1146 1340 934
 Q 1542 723 1907 723 
 z
 " transform="scale(0.015625)"/>
-      <path id="JetBrainsMono-Regular-6d" d="M 384 0 
+      <path id="JetBrainsMono-Regular-11a" d="M 384 0 
 L 384 3520 
 L 883 3520 
 L 883 3053 
@@ -1134,24 +1134,24 @@ L 384 0
 z
 " transform="scale(0.015625)"/>
      </defs>
-     <use xlink:href="#JetBrainsMono-Regular-50"/>
-     <use xlink:href="#JetBrainsMono-Regular-72" transform="translate(59.999985 0)"/>
-     <use xlink:href="#JetBrainsMono-Regular-6f" transform="translate(119.999969 0)"/>
-     <use xlink:href="#JetBrainsMono-Regular-67" transform="translate(179.999954 0)"/>
-     <use xlink:href="#JetBrainsMono-Regular-72" transform="translate(239.999939 0)"/>
-     <use xlink:href="#JetBrainsMono-Regular-61" transform="translate(299.999924 0)"/>
-     <use xlink:href="#JetBrainsMono-Regular-6d" transform="translate(359.999908 0)"/>
-     <use xlink:href="#JetBrainsMono-Regular-6d" transform="translate(419.999893 0)"/>
-     <use xlink:href="#JetBrainsMono-Regular-65" transform="translate(479.999878 0)"/>
-     <use xlink:href="#JetBrainsMono-Regular-72" transform="translate(539.999863 0)"/>
-     <use xlink:href="#JetBrainsMono-Regular-73" transform="translate(599.999847 0)"/>
+     <use xlink:href="#JetBrainsMono-Regular-7a"/>
+     <use xlink:href="#JetBrainsMono-Regular-140" transform="translate(60 0)"/>
+     <use xlink:href="#JetBrainsMono-Regular-122" transform="translate(120 0)"/>
+     <use xlink:href="#JetBrainsMono-Regular-f5" transform="translate(180 0)"/>
+     <use xlink:href="#JetBrainsMono-Regular-140" transform="translate(240 0)"/>
+     <use xlink:href="#JetBrainsMono-Regular-bd" transform="translate(300 0)"/>
+     <use xlink:href="#JetBrainsMono-Regular-11a" transform="translate(360 0)"/>
+     <use xlink:href="#JetBrainsMono-Regular-11a" transform="translate(420 0)"/>
+     <use xlink:href="#JetBrainsMono-Regular-e1" transform="translate(480 0)"/>
+     <use xlink:href="#JetBrainsMono-Regular-140" transform="translate(540 0)"/>
+     <use xlink:href="#JetBrainsMono-Regular-144" transform="translate(600 0)"/>
     </g>
    </g>
    <g id="text_10">
     <!-- 13 solved -->
-    <g style="fill: #344054" transform="translate(600.38496 153.6962) scale(0.118 -0.118)">
+    <g style="fill: #344054" transform="translate(600.38496 154.6992) scale(0.118 -0.118)">
      <defs>
-      <path id="JetBrainsMono-Bold-31" d="M 538 0 
+      <path id="JetBrainsMono-Bold-2d5" d="M 538 0 
 L 538 723 
 L 1754 723 
 L 1754 3898 
@@ -1165,7 +1165,7 @@ L 3533 0
 L 538 0 
 z
 " transform="scale(0.015625)"/>
-      <path id="JetBrainsMono-Bold-33" d="M 1875 -64 
+      <path id="JetBrainsMono-Bold-2d7" d="M 1875 -64 
 Q 1184 -64 781 297 
 Q 378 659 378 1280 
 L 1184 1280 
@@ -1192,22 +1192,22 @@ Q 2566 -64 1875 -64
 z
 " transform="scale(0.015625)"/>
      </defs>
-     <use xlink:href="#JetBrainsMono-Bold-31"/>
-     <use xlink:href="#JetBrainsMono-Bold-33" transform="translate(59.999985 0)"/>
-     <use xlink:href="#JetBrainsMono-Bold-20" transform="translate(119.999969 0)"/>
-     <use xlink:href="#JetBrainsMono-Bold-73" transform="translate(179.999954 0)"/>
-     <use xlink:href="#JetBrainsMono-Bold-6f" transform="translate(239.999939 0)"/>
-     <use xlink:href="#JetBrainsMono-Bold-6c" transform="translate(299.999924 0)"/>
-     <use xlink:href="#JetBrainsMono-Bold-76" transform="translate(359.999908 0)"/>
-     <use xlink:href="#JetBrainsMono-Bold-65" transform="translate(419.999893 0)"/>
-     <use xlink:href="#JetBrainsMono-Bold-64" transform="translate(479.999878 0)"/>
+     <use xlink:href="#JetBrainsMono-Bold-2d5"/>
+     <use xlink:href="#JetBrainsMono-Bold-2d7" transform="translate(60 0)"/>
+     <use xlink:href="#JetBrainsMono-Bold-3be" transform="translate(120 0)"/>
+     <use xlink:href="#JetBrainsMono-Bold-144" transform="translate(180 0)"/>
+     <use xlink:href="#JetBrainsMono-Bold-122" transform="translate(240 0)"/>
+     <use xlink:href="#JetBrainsMono-Bold-113" transform="translate(300 0)"/>
+     <use xlink:href="#JetBrainsMono-Bold-169" transform="translate(360 0)"/>
+     <use xlink:href="#JetBrainsMono-Bold-e1" transform="translate(420 0)"/>
+     <use xlink:href="#JetBrainsMono-Bold-dd" transform="translate(480 0)"/>
     </g>
    </g>
    <g id="text_11">
     <!-- Main Lang -->
-    <g style="fill: #667085" transform="translate(358.87104 179.177247) scale(0.094 -0.094)">
+    <g style="fill: #667085" transform="translate(358.87104 179.7552) scale(0.094 -0.094)">
      <defs>
-      <path id="JetBrainsMono-Regular-4d" d="M 461 0 
+      <path id="JetBrainsMono-Regular-59" d="M 461 0 
 L 461 4672 
 L 1312 4672 
 L 1907 2650 
@@ -1228,7 +1228,7 @@ L 1018 0
 L 461 0 
 z
 " transform="scale(0.015625)"/>
-      <path id="JetBrainsMono-Regular-69" d="M 544 0 
+      <path id="JetBrainsMono-Regular-ff" d="M 544 0 
 L 544 525 
 L 1792 525 
 L 1792 2995 
@@ -1251,8 +1251,8 @@ Q 2470 4371 2348 4262
 Q 2227 4154 2016 4154 
 z
 " transform="scale(0.015625)"/>
-      <path id="JetBrainsMono-Regular-20" transform="scale(0.015625)"/>
-      <path id="JetBrainsMono-Regular-4c" d="M 832 0 
+      <path id="JetBrainsMono-Regular-3be" transform="scale(0.015625)"/>
+      <path id="JetBrainsMono-Regular-53" d="M 832 0 
 L 832 4672 
 L 1408 4672 
 L 1408 525 
@@ -1262,22 +1262,22 @@ L 832 0
 z
 " transform="scale(0.015625)"/>
      </defs>
-     <use xlink:href="#JetBrainsMono-Regular-4d"/>
-     <use xlink:href="#JetBrainsMono-Regular-61" transform="translate(59.999985 0)"/>
-     <use xlink:href="#JetBrainsMono-Regular-69" transform="translate(119.999969 0)"/>
-     <use xlink:href="#JetBrainsMono-Regular-6e" transform="translate(179.999954 0)"/>
-     <use xlink:href="#JetBrainsMono-Regular-20" transform="translate(239.999939 0)"/>
-     <use xlink:href="#JetBrainsMono-Regular-4c" transform="translate(299.999924 0)"/>
-     <use xlink:href="#JetBrainsMono-Regular-61" transform="translate(359.999908 0)"/>
-     <use xlink:href="#JetBrainsMono-Regular-6e" transform="translate(419.999893 0)"/>
-     <use xlink:href="#JetBrainsMono-Regular-67" transform="translate(479.999878 0)"/>
+     <use xlink:href="#JetBrainsMono-Regular-59"/>
+     <use xlink:href="#JetBrainsMono-Regular-bd" transform="translate(60 0)"/>
+     <use xlink:href="#JetBrainsMono-Regular-ff" transform="translate(120 0)"/>
+     <use xlink:href="#JetBrainsMono-Regular-11b" transform="translate(180 0)"/>
+     <use xlink:href="#JetBrainsMono-Regular-3be" transform="translate(240 0)"/>
+     <use xlink:href="#JetBrainsMono-Regular-53" transform="translate(300 0)"/>
+     <use xlink:href="#JetBrainsMono-Regular-bd" transform="translate(360 0)"/>
+     <use xlink:href="#JetBrainsMono-Regular-11b" transform="translate(420 0)"/>
+     <use xlink:href="#JetBrainsMono-Regular-f5" transform="translate(480 0)"/>
     </g>
    </g>
    <g id="text_12">
     <!-- C# -->
-    <g style="fill: #9b4f96" transform="translate(649.94496 179.6162) scale(0.118 -0.118)">
+    <g style="fill: #9b4f96" transform="translate(649.94496 180.6192) scale(0.118 -0.118)">
      <defs>
-      <path id="JetBrainsMono-Bold-43" d="M 1971 -64 
+      <path id="JetBrainsMono-Bold-1b" d="M 1971 -64 
 Q 1517 -64 1184 105 
 Q 851 275 668 585 
 Q 486 896 486 1318 
@@ -1304,7 +1304,7 @@ Q 3085 275 2752 105
 Q 2419 -64 1971 -64 
 z
 " transform="scale(0.015625)"/>
-      <path id="JetBrainsMono-Bold-23" d="M 493 0 
+      <path id="JetBrainsMono-Bold-33a" d="M 493 0 
 L 710 1216 
 L 224 1216 
 L 224 1760 
@@ -1342,15 +1342,15 @@ L 1363 1760
 z
 " transform="scale(0.015625)"/>
      </defs>
-     <use xlink:href="#JetBrainsMono-Bold-43"/>
-     <use xlink:href="#JetBrainsMono-Bold-23" transform="translate(59.999985 0)"/>
+     <use xlink:href="#JetBrainsMono-Bold-1b"/>
+     <use xlink:href="#JetBrainsMono-Bold-33a" transform="translate(60 0)"/>
     </g>
    </g>
    <g id="text_13">
     <!-- Languages -->
-    <g style="fill: #667085" transform="translate(358.87104 196.3068) scale(0.084 -0.084)">
+    <g style="fill: #667085" transform="translate(358.87104 197.0208) scale(0.084 -0.084)">
      <defs>
-      <path id="JetBrainsMono-Regular-75" d="M 1914 -64 
+      <path id="JetBrainsMono-Regular-151" d="M 1914 -64 
 Q 1306 -64 941 297 
 Q 576 659 576 1280 
 L 576 3520 
@@ -1368,21 +1368,21 @@ Q 2522 -64 1914 -64
 z
 " transform="scale(0.015625)"/>
      </defs>
-     <use xlink:href="#JetBrainsMono-Regular-4c"/>
-     <use xlink:href="#JetBrainsMono-Regular-61" transform="translate(59.999985 0)"/>
-     <use xlink:href="#JetBrainsMono-Regular-6e" transform="translate(119.999969 0)"/>
-     <use xlink:href="#JetBrainsMono-Regular-67" transform="translate(179.999954 0)"/>
-     <use xlink:href="#JetBrainsMono-Regular-75" transform="translate(239.999939 0)"/>
-     <use xlink:href="#JetBrainsMono-Regular-61" transform="translate(299.999924 0)"/>
-     <use xlink:href="#JetBrainsMono-Regular-67" transform="translate(359.999908 0)"/>
-     <use xlink:href="#JetBrainsMono-Regular-65" transform="translate(419.999893 0)"/>
-     <use xlink:href="#JetBrainsMono-Regular-73" transform="translate(479.999878 0)"/>
+     <use xlink:href="#JetBrainsMono-Regular-53"/>
+     <use xlink:href="#JetBrainsMono-Regular-bd" transform="translate(60 0)"/>
+     <use xlink:href="#JetBrainsMono-Regular-11b" transform="translate(120 0)"/>
+     <use xlink:href="#JetBrainsMono-Regular-f5" transform="translate(180 0)"/>
+     <use xlink:href="#JetBrainsMono-Regular-151" transform="translate(240 0)"/>
+     <use xlink:href="#JetBrainsMono-Regular-bd" transform="translate(300 0)"/>
+     <use xlink:href="#JetBrainsMono-Regular-f5" transform="translate(360 0)"/>
+     <use xlink:href="#JetBrainsMono-Regular-e1" transform="translate(420 0)"/>
+     <use xlink:href="#JetBrainsMono-Regular-144" transform="translate(480 0)"/>
     </g>
    </g>
   </g>
  </g>
  <defs>
-  <clipPath id="p6c89463079">
+  <clipPath id="pe7c9dd4892">
    <rect x="345.6" y="11.52" width="331.776" height="207.36"/>
   </clipPath>
  </defs>
