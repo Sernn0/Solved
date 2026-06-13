@@ -6,7 +6,7 @@
   <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
    <cc:Work>
     <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
-    <dc:date>2026-06-12T17:29:32.467253</dc:date>
+    <dc:date>2026-06-13T16:07:19.055335</dc:date>
     <dc:format>image/svg+xml</dc:format>
     <dc:creator>
      <cc:Agent>
@@ -36,7 +36,7 @@ L 63.696 37.8
 L 63.696 12.6 
 L 55.296 12.6 
 z
-" clip-path="url(#p532bfafe18)" style="fill: #9b4f96"/>
+" clip-path="url(#p96eb553197)" style="fill: #9b4f96"/>
    </g>
    <g id="text_1">
     <!-- C# -->
@@ -252,7 +252,7 @@ L 219.216 37.8
 L 219.216 12.6 
 L 210.816 12.6 
 z
-" clip-path="url(#p532bfafe18)" style="fill: #f34b7d"/>
+" clip-path="url(#p96eb553197)" style="fill: #f34b7d"/>
    </g>
    <g id="text_3">
     <!-- C++ -->
@@ -356,7 +356,7 @@ L 374.736 37.8
 L 374.736 12.6 
 L 366.336 12.6 
 z
-" clip-path="url(#p532bfafe18)" style="fill: #f1e05a"/>
+" clip-path="url(#p96eb553197)" style="fill: #f1e05a"/>
    </g>
    <g id="text_5">
     <!-- JavaScript -->
@@ -636,7 +636,7 @@ L 530.256 37.8
 L 530.256 12.6 
 L 521.856 12.6 
 z
-" clip-path="url(#p532bfafe18)" style="fill: #3572a5"/>
+" clip-path="url(#p96eb553197)" style="fill: #3572a5"/>
    </g>
    <g id="text_7">
     <!-- Python -->
@@ -792,7 +792,7 @@ L 63.696 88.2
 L 63.696 63 
 L 55.296 63 
 z
-" clip-path="url(#p532bfafe18)" style="fill: #6e6e6e"/>
+" clip-path="url(#p96eb553197)" style="fill: #6e6e6e"/>
    </g>
    <g id="text_9">
     <!-- C -->
@@ -840,7 +840,7 @@ z
   </g>
  </g>
  <defs>
-  <clipPath id="p532bfafe18">
+  <clipPath id="p96eb553197">
    <rect x="0" y="0" width="691.2" height="100.8"/>
   </clipPath>
  </defs>
